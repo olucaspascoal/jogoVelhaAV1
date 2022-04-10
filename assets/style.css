@@ -1,0 +1,131 @@
+*{
+    margin:  0;
+    padding: 0;
+}
+
+body{
+    color:#fff;
+    font-size: 24px;
+    font-family: arial;
+    background-color: #333;
+}
+
+#container{
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+
+#painelEsquerdo{
+    flex:1;
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    flex-direction: column;
+    border-right: 1px dashed #ccc;
+}
+
+.input-jogador{
+    height: 40px;
+    width:  100%;
+    color:#333;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.input-jogador::placeholder{
+    color:#ccc;
+}
+#placar, #historico{
+    text-align: center;
+    margin-top: 3rem;
+}
+
+#painel-direito{
+    display: flex;
+    flex:4;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#tabuleiro{
+    width:  50vw;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.linha{
+    display: flex;
+    flex:1;
+    flex-direction: row;
+    border-bottom: 1px solid #ccc;
+}
+
+.linha:last-child{
+    border-bottom: 0px;
+}
+
+.jogada{
+    display: flex;
+    flex:1;
+    align-items: center;
+    justify-content: center;
+    font-size:90px;
+    border-right: 1px solid #ccc;
+}
+
+.jogada:last-child{
+    border-right: 0px;
+}
+
+.jogada:hover{
+    color:#f903a9;
+    background-color: #3f3f3f;
+}
+
+#container-acao{
+    margin-top: 100px;
+}
+
+#botao-iniciar, #btnRestart, #btnProximo{
+    background-color: #861480;
+    width: 40vw;
+    height: 60px;
+    border:2px solid #f903a9;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+#botao-iniciar:hover{
+    opacity: 0.8;
+}
+
+.jogada{
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+.jogada.x,
+.jogada.o{
+   cursor: not-allowed;
+}
+
+.jogada.x::after{
+    content: "X";
+    color: red;
+    position: absolute;
+}
+
+.jogada.o::after{
+    content: "O";
+    color: blue;
+    position: absolute;
+}

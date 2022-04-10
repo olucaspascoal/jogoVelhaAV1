@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/style.css">
+    <title> Jogo da Velha | AV1 </title>
+</head>
+<body>
+    <div id="container">
+        <div id="painelEsquerdo">
+            <input type="text" id="jogador1" placeholder="Digite o jogador 1 (O)" class="input-jogador"/>
+            <input type="text" id="jogador2" placeholder="Digite o jogador 2 (x)" class="input-jogador"/>
+            <div class="texto-dinamino" id="mensagem"> </div>
+            <p id="texto"></p>
+            <div id="placar">
+                <p> Placar Atual </p>
+                <h4> <i id="player1"></i> -- <i id="placar1"> </i> </h4>
+                <h4> <i id="player2"></i> -- <i id="placar2"> </i> </h4>
+            </div>
+            <div id="historico">
+                <p>Histórico</p>
+                <div id="historico-item"></div>
+            </div>
+            
+        </div>
+        <div id="painel-direito">
+            
+            <div id="tabuleiro">
+                <div class="linha">
+                    <div class="jogada" id="item"> </div>
+                    <div class="jogada" id="item"> </div>
+                    <div class="jogada" id="item"> </div>
+                </div>
+                <div class="linha">
+                    <div class="jogada" id="item"> </div>
+                    <div class="jogada" id="item"> </div>
+                    <div class="jogada" id="item"> </div>
+                </div>
+                <div class="linha">
+                    <div class="jogada" id="item"> </div>
+                    <div class="jogada" id="item"> </div>
+                    <div class="jogada" id="item"> </div>
+                </div>
+            </div>
+            <h2 id="ganhador"> </h2>
+            <div id="container-acao">
+                <button id="botao-iniciar" onclick="comecar()">Começar o Jogo!</button>
+            </div>
+            <button id="btnProximo"> Próxima partida </button>
+            <button id="btnRestart" onclick="reiniciar()"> Reiniciar </button>
+        </div>
+    </div>
+    <script src="assets/main.js"></script>
+</body>
+</html>
